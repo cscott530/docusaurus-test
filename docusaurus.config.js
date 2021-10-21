@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'II Docusaurus POC',
+  tagline: 'Trying out docusaurus as a POC',
   url: 'https://cscott530.github.io',
   baseUrl: '/docusaurus-test/',
   onBrokenLinks: 'throw',
