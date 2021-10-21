@@ -2,6 +2,8 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+To view the deployed docs, go [here](https://cscott530.github.io/docusaurus-test/) and click Tutorials along the top.
+
 ### Installation
 
 ```
