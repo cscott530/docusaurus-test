@@ -24,7 +24,9 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          editUrl: ({ docPath }) => {
+            return `https://github.com/cscott530/docusaurus-test/blob/main/docs/${docPath}`
+          },
         },
         blog: {
           showReadingTime: true,

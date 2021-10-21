@@ -21,10 +21,9 @@ jobs:
         run: yarn build
 
       - name: Deploy Docs
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: ghpages # The branch the action should deploy to.
-          FOLDER: docs # The folder that the build script generates files.
           CLEAN: true # Automatically remove deleted files from the deploy branch
-          TARGET_FOLDER: build # The folder that we serve our files from
+          FOLDER: build # The folder that we serve our files from
