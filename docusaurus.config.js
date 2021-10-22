@@ -23,6 +23,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           editUrl: ({ docPath }) => {
             return `https://github.com/cscott530/docusaurus-test/blob/main/docs/${docPath}`
           },
