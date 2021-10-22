@@ -16,6 +16,9 @@ const config = {
   organizationName: 'cscott530', // Usually your GitHub org/user name.
   projectName: 'docusaurus-test', // Usually your repo name.
   trailingSlash: true,
+  plugins: [
+    require.resolve('@cmfcmf/docusaurus-search-local')
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
