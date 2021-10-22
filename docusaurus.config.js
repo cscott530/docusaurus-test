@@ -30,7 +30,7 @@ const config = {
         blog: {
           showReadingTime: true,
           editUrl: ({ blogPath }) => {
-            return `https://github.com/cscott530/docusaurus-test/blob/main/docs/${blogPath}`
+            return `https://github.com/cscott530/docusaurus-test/blob/main/blog/${blogPath}`
           },
         },
         theme: {
