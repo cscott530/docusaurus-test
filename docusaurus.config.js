@@ -23,16 +23,15 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl: ({ docPath }) => {
             return `https://github.com/cscott530/docusaurus-test/blob/main/docs/${docPath}`
           },
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+          editUrl: ({ blogPath }) => {
+            return `https://github.com/cscott530/docusaurus-test/blob/main/docs/${blogPath}`
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -108,7 +107,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
