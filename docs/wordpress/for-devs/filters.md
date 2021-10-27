@@ -53,3 +53,32 @@ function wpseo__appendbaseurl_breadcrumbs( $this_crumbs ) {
     return $this_crumbs;
 }
 ```
+
+## Permalink
+
+The last major thing we use filters for is re-writing the base permalink value. Blog2Social makes heavy use of `get_permalink` as a way to get what URL it should be sharing to social platforms. Rather than sharing a WP link, we need to share the link to the public site.
+
+Whenever a "link" function is called for `post` or `page` entries (realistically the only things we'll share to social media), we can modify the value in use (from `extensions/b2s-getpermalink.php`):
+
+```php
+foreach( [ 'post', 'page' ] as $type )
+{
+	add_filter( $type . '_link', function ( $url, $post_id, $sample ) use ( $type )
+	{
+		return apply_filters( 'wpse_link', $url, $post_id, $sample, $type );
+	}, 9999, 3 );
+}
+
+add_filter( 'wpse_link', function($value, $post_id, $sample, $type)
+{
+	$domain = get_domain();
+	$home = get_option('home');
+	return str_replace($home, $domain, $value);
+}, 10, 4 );
+```
+
+:::note
+This is a very heavy-handed approach. It is applied to _every call_ for a post or page's permalink value, including GraphQL. To handle that, we need to use [GraphQL Resolvers](./modifying-graphql.md) to fix the GraphQL value before it is served.
+
+The pros out-weigh the cons in the sense that it allows us to upgrade Blog2Social as often as we like without having to modify its source code as we had done previously.
+:::

@@ -75,6 +75,30 @@ And finally, this is where we specify that this group only applies to posts, not
 )
 ```
 
+The consuming GraphQL in Gatsby could look like this:
+
+```graphql
+query {
+    post {
+        id
+        title
+        content
+        ...
+        iiCustomField {
+            subTitle
+            featuredImageSource
+            authors {
+                nodes {
+                    id
+                    name
+                    email
+                }
+            }
+        }
+    }
+}
+```
+
 ## Using the UI to get all options:
 
 IMO, the easiest way to see all of the available options is to use the UI to configure these fields, then grab out the values.
@@ -82,17 +106,25 @@ IMO, the easiest way to see all of the available options is to use the UI to con
 ACF supports this versioning using a feature called Local JSON.
 
 1. Create a folder in the theme called `acf-json`:
+
    ![Folder Example](assets/acf-json-folder.png)
+
 1. Use the UI in WP to configure your content:
+
    ![New Group](assets/acf-json-new-group.png)
    :::tip
    The field group name doesn't matter. In most cases we'll be adding the field values to an existing group, but you need a placeholder to be able to get to that point.
    :::
+
 1. Now you can start adding the fields you want, with the full UI to make the options a little easier:
+
    ![New Field](assets/acf-json-new-field.png)
    then fill in some values:
+
    ![Values](assets/acf-json-field-values.png)
+
 1. Lastly, publish your new field group, and a new file should appear inside the theme:
+
    ![Created JSON](assets/acf-json-created-file.png)
 
 Using common sense, you should be able to easily translate the JSON to PHP:
