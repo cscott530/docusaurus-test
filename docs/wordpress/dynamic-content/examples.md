@@ -12,7 +12,8 @@ This is a collection of real-world examples (existing static content in the Publ
 
 ```html
 <div class=”ii-dynamic-content”
-	data-asset-type=”report”
+	data-type=”asset”
+        data-asset-type="report"
 	data-primary-topic=”ecommerce-retail”
 	data-include-images
 	data-count=”3”/>
@@ -30,10 +31,10 @@ Count would be optional because it defaults to 3, but it's generally best practi
 
 ```html
 <div class=”ii-dynamic-content”
-	data-asset-type=”chart”
+	data-type=”chart”
 	data-primary-topic="health"
-    data-include-images
-    data-dark-bg
+        data-include-images
+        data-dark-bg
 	data-count=”3” />
 ```
 
@@ -45,7 +46,7 @@ Count would be optional because it defaults to 3, but it's generally best practi
 
 ```html
 <div class=”ii-dynamic-content”
-	data-asset-type=”forecast”
+	data-type=”forecast”
 	data-count=”10”
 	data-primary-topic=”ecommerce-retail” />
 
@@ -58,7 +59,8 @@ _This isn't a real use-case, so there's no image. I wanted to showcase how you c
 
 ```html
 <div class=”ii-dynamic-content”
-	data-asset-type="report"
+	data-type="asset"
+        data-asset-type="report"
 	data-count=”3”
 	data-primary-topic=”ecommerce-retail”
     data-access-level="locked"
