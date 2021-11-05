@@ -26,8 +26,9 @@ Unless otherwise stated, none of the values are case sensitive.
 
 | Property | Default Value | Description | Example |
 | -- | -- | -- | -- |
-| `data-asset-type` | (unset) | **This is a required field**. The type of asset to display in the widget. For v1.0, there are three possible values: `report`, `forecast`, `chart`. | `data-asset-type="report"` |
+| `data-type` | (unset) | **This is a required field**. The type of data to display in the widget. For v1.0, there are three possible values: `asset`, `forecast`, `chart`. | `data-type="asset"` |
 | `data-primary-topic` | (unset) | **This is a required field**. The slug of the assset's primary topic. Some possible examples: `ecommerce-retail`, or `health` | `data-primary-topic="health"` |
+| `data-asset-type` | (unset) | When `data-type` is set to `"asset"`, this will allow further filtering of the asset type. Possible values are: `article`, `audio`, `interview`, `report`, `video`. When unset will include all asset types. | `data-asset-type="video"` |
 | `data-count` | `3` | The number of assets to show in the UI. Typically we have used 3 for image-based asset types, and 10 for text-only assets. If there are not enough assets to match the criteria, only the number available will be shown. | `data-count="3"` |
 | `data-include-images` | `False` | Whether or not to include images from the assets when displaying in the UI. _Note this is a boolean attribute. Include it for true and exclude for false. No value is required._ | `data-include-images` |
 | `data-access-level` | `public` | The access-level of the asset. There are three possible values: `public`, `locked`, `nonclient`. See [below](#access-levels) for further explanation. Note that the display of the assets within the public site will not vary between the three access levels. The difference only applies when a user clicks the link and goes to the asset’s page. | `data-access-level="public"` |
