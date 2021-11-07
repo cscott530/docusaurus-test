@@ -11,12 +11,14 @@ This is a collection of real-world examples (existing static content in the Publ
 ![Ecommerce Reports](assets/ecommerce-reports.png)
 
 ```html
-<div class=”ii-dynamic-content”
-	data-type=”asset”
-        data-asset-type="report"
-	data-primary-topic=”ecommerce-retail”
-	data-include-images
-	data-count=”3”/>
+<div
+  class="”ii-dynamic-content”"
+  data-type="”asset”"
+  data-asset-type="report"
+  data-primary-topic="”ecommerce-retail”"
+  data-include-images
+  data-count="”3”"
+/>
 ```
 
 :::tip
@@ -30,12 +32,14 @@ Count would be optional because it defaults to 3, but it's generally best practi
 ![Health Charts](assets/health-charts.png)
 
 ```html
-<div class=”ii-dynamic-content”
-	data-type=”chart”
-	data-primary-topic="health"
-        data-include-images
-        data-dark-bg
-	data-count=”3” />
+<div
+  class="”ii-dynamic-content”"
+  data-type="”chart”"
+  data-primary-topic="health"
+  data-include-images
+  data-dark-bg
+  data-count="”3”"
+/>
 ```
 
 ---
@@ -45,27 +49,31 @@ Count would be optional because it defaults to 3, but it's generally best practi
 ![Ecommerce Forecasts](assets/ecommerce-forecasts.png)
 
 ```html
-<div class=”ii-dynamic-content”
-	data-type=”forecast”
-	data-count=”10”
-	data-primary-topic=”ecommerce-retail” />
-
+<div
+  class="”ii-dynamic-content”"
+  data-type="”forecast”"
+  data-count="”10”"
+  data-primary-topic="”ecommerce-retail”"
+/>
 ```
 
---- 
+---
+
 ### Reports with Multiple Criteria
 
 _This isn't a real use-case, so there's no image. I wanted to showcase how you could filter by multiple items at once._
 
 ```html
-<div class=”ii-dynamic-content”
-	data-type="asset"
-        data-asset-type="report"
-	data-count=”3”
-	data-primary-topic=”ecommerce-retail”
-    data-access-level="locked"
-    data-author="karin-von-abrams, barbara-peng"
-    data-geography="united states, canada, mexico" />
+<div
+  class="”ii-dynamic-content”"
+  data-type="asset"
+  data-asset-type="report"
+  data-count="”3”"
+  data-primary-topic="”ecommerce-retail”"
+  data-access-level="locked"
+  data-author="karin-von-abrams, barbara-peng"
+  data-geography="united states, canada, mexico"
+/>
 ```
 
 :::note
