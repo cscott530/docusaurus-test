@@ -10,7 +10,7 @@ The basic usage is to add a div with `class="ii-dynamic-content"`:
 <div class=”ii-dynamic-content” 
     data-count=”5” 
     data-include-images 
-    data-asset-type=”report” />
+    data-type=”chart” />
 ```
 
 You **must** include `class="ii-dynamic-content"` for the public site to properly find your widget.
