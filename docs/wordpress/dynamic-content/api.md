@@ -34,7 +34,7 @@ Unless otherwise stated, none of the values are case sensitive.
 | `data-access-level` | `public` | The access-level of the asset. There are three possible values: `public`, `locked`, `nonclient`. See [below](#access-levels) for further explanation. Note that the display of the assets within the public site will not vary between the three access levels. The difference only applies when a user clicks the link and goes to the asset’s page. | `data-access-level="public"` |
 | `data-dark-bg` | `False` | Whether or not the dynamic content will be displayed on a dark background. The background won’t actually be set in the dynamic content widget (it’s done in WordPress), but foreground text color will be altered. See the Ecommerce & Retail Statics & Charts section [here](https://www.insiderintelligence.com/coverage/ecommerce-retail/) for an example. _Note this is a boolean attribute. Include it for true and exclude for false. No value is required._ | `data-dark-bg` |
 | `data-geography` | (unset) | List of geographies to include. Separated by commas. | `data-geography="united states, canada, mexico"` |
-| `data-author` | (unset) | List of authors to include. Use the author’s slug. Separated by commas. | `data-author="barbara-peng, chris-scott"` | 
+| `data-author` | (unset) | List of authors to include. Use the author’s slug. Separated by commas. ** This is unsupported currently ** | `data-author="barbara-peng, chris-scott"` | 
 
 
 ## Access Level Explanation {#access-levels}
